@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Асельдің сырға салу салтанатына шақыру" />
+    <title>Сырға салу — Асель</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Негізгі мазмұнға өту</a>
+
+    <header class="hero" id="top" aria-label="Басты экран">
+      <div class="hero__media" aria-hidden="true">
+        <img
+          class="hero__img"
+          src="images/saukele.jpg"
+          alt=""
+          width="736"
+          height="1104"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title reveal" data-reveal>Сырға салу</h1>
+        <p class="hero__name reveal" data-reveal>Асель</p>
+        <p class="hero__subtitle reveal" data-reveal>
+          Құрметті қонақтар, сіздерді Асельдің сырға салу салтанатына шақырамыз
+        </p>
+        <div class="hero__actions reveal" data-reveal>
+          <button type="button" class="btn btn--ghost" data-scroll-to="#details" aria-label="Төменге айналдыру">
+            <span>Төмен қарау</span>
+            <svg class="icon-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <audio id="bgAudio" loop playsinline preload="auto" autoplay aria-hidden="true">
+        <source src="music/kiss-i-was-made-for-lovin-you-mp3jcc_EAMClGsE.mp3" type="audio/mpeg" />
+      </audio>
+    </header>
+
+    <main id="main">
+      <section class="section section--details" id="details" aria-labelledby="details-heading">
+        <div class="container">
+          <div class="glass-card reveal" data-reveal>
+            <h2 id="details-heading" class="section__title">Күні мен орны</h2>
+            <ul class="detail-list">
+              <li>
+                <span class="detail-list__label">Күні</span>
+                <span class="detail-list__value">18 шілде</span>
+              </li>
+              <li>
+                <span class="detail-list__label">Мекенжай</span>
+                <span class="detail-list__value">Гостевой дом</span>
+                <span class="detail-list__sub">Кокшетау, Сыздыкова 2Б</span>
+              </li>
+            </ul>
+            <div class="detail-actions">
+              <a
+                class="btn btn--primary btn--2gis btn--2gis-large"
+                href="https://2gis.kz/kokshetau/geo/70000001069449533"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                2GIS-та ашу
+              </a>
+              <p class="detail-actions__hint">Маршрутты 2GIS арқылы көру</p>
+              <!-- Болашақта картаны қосу үшін орын -->
+              <p class="detail-actions__future" hidden>Карта сілтемесі кейін қосылады</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--invite" id="invite" aria-labelledby="invite-heading">
+        <div class="container container--narrow">
+          <div class="ornament ornament--top" aria-hidden="true"></div>
+          <h2 id="invite-heading" class="visually-hidden">Шақыру мәтіні</h2>
+          <div class="invite-text reveal" data-reveal>
+            <p>
+              Құрметті ата-аналар, жақын-жуықтар мен достар! Сіздерді Асельдің өміріндегі ерекше сәт —
+              <strong>сырға салу</strong> салтанатына шақырамыз. Бұл күн отбасымыз үшін қуаныш пен мереке белгісі,
+              ал сіздің қатысуыңыз оны есте қаларлық етеді.
+            </p>
+            <p>
+              Дәстүрді құрметтей отырып, жүректен дастархан жайып, сіздерді жылы қарсы алуға дайынбыз. Салтанатқа
+              келіп, біздің қуанышымызға ортақ болыңыздар.
+            </p>
+            <p class="invite-text__sign">Тілекпен,<br />отбасы</p>
+          </div>
+          <div class="ornament ornament--bottom" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="section section--countdown" id="countdown" aria-labelledby="countdown-heading">
+        <div class="container">
+          <h2 id="countdown-heading" class="section__title section__title--center">Салтанатқа дейін</h2>
+          <p class="section__lede">18 шілде, сағат 16:00 — Қазақстан уақыты (UTC+5)</p>
+          <div class="countdown" role="timer" aria-live="polite" aria-atomic="true">
+            <div class="countdown__item reveal" data-reveal>
+              <span class="countdown__value" id="cd-days">00</span>
+              <span class="countdown__unit">күн</span>
+            </div>
+            <div class="countdown__item reveal" data-reveal>
+              <span class="countdown__value" id="cd-hours">00</span>
+              <span class="countdown__unit">сағат</span>
+            </div>
+            <div class="countdown__item reveal" data-reveal>
+              <span class="countdown__value" id="cd-minutes">00</span>
+              <span class="countdown__unit">минут</span>
+            </div>
+            <div class="countdown__item reveal" data-reveal>
+              <span class="countdown__value" id="cd-seconds">00</span>
+              <span class="countdown__unit">секунд</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--gallery" id="gallery" aria-labelledby="gallery-heading">
+        <div class="container">
+          <h2 id="gallery-heading" class="section__title section__title--center">Салтанат көңілі</h2>
+          <p class="section__lede">Дәстүр, зергерлік, жібек пен нақыш — бетсіз, жұмсақ кадрлар</p>
+          <div class="gallery masonry" id="galleryGrid">
+            <figure class="gallery__item reveal" data-reveal>
+              <div class="gallery__ph" data-placeholder></div>
+              <img
+                class="gallery__img"
+                src="images/rings.jpg"
+                alt="Сырға мен алтын зергерлік"
+                width="750"
+                height="750"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="gallery__item gallery__item--tall reveal" data-reveal>
+              <div class="gallery__ph" data-placeholder></div>
+              <img
+                class="gallery__img"
+                src="images/saukele.jpg"
+                alt="Дәстүрлі бас киім нақышы, сәукелеге ұқсас әшекей"
+                width="736"
+                height="1104"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="gallery__item gallery__item--wide reveal" data-reveal>
+              <div class="gallery__ph" data-placeholder></div>
+              <img
+                class="gallery__img"
+                src="images/hands.jpg"
+                alt="Қолдар мен салтанат кию бөлшектерінің жақын көрінісі"
+                width="960"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--closing" id="closing" aria-labelledby="closing-heading">
+        <div class="container container--narrow">
+          <h2 id="closing-heading" class="visually-hidden">Қорытынды</h2>
+          <blockquote class="closing-quote reveal" data-reveal>
+            <p>Қуанышымызға ортақ болып, қадірлі қонағымыз болыңыздар!</p>
+          </blockquote>
+          <footer class="site-footer">
+            <div class="ornament ornament--footer" aria-hidden="true"></div>
+            <p class="site-footer__meta">Асель · Сырға салу · 18 шілде</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
